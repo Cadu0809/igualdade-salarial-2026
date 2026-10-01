@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Relatório de Igualdade Salarial – 2º semestre de 2026 | Grupo Asserth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --chumbo:#1E2227; --dourado:#D3A642; --dourado-escuro:#B98A2E;
+    --verde:#036847; --creme:#F5F1EC; --texto-suave:#555A60;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *,*::before,*::after{box-sizing:inherit}
+  html{scroll-padding-top:env(safe-area-inset-top,0px)}
+  body{margin:0;background:var(--creme);color:var(--chumbo);
+    font-family:Montserrat,"Segoe UI",Arial,sans-serif;line-height:1.6;-webkit-text-size-adjust:100%}
+  .nobr{white-space:nowrap}
+
+  header{background:var(--chumbo);border-bottom:5px solid var(--dourado)}
+  .topo{max-width:1040px;margin:0 auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .topo img{height:42px;width:auto;display:block}
+  .topo .marca-texto{color:#fff;font-weight:800;font-size:20px}
+  .topo span.dp{color:var(--dourado);font-size:13px;font-weight:500}
+
+  main{max-width:1040px;margin:0 auto;padding:40px 24px 56px}
+  h1{font-size:clamp(24px,4vw,34px);line-height:1.2;font-weight:800;margin:0 0 14px;max-width:24ch}
+  .intro{font-size:16px;max-width:62ch;margin:0 0 28px;color:var(--chumbo)}
+
+  .acoes{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 24px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:15px;
+    padding:12px 20px;border-radius:6px;text-decoration:none;cursor:pointer;border:2px solid var(--chumbo)}
+  .btn-principal{background:var(--dourado);border-color:var(--dourado);color:var(--chumbo)}
+  .btn-principal:hover{background:var(--dourado-escuro);border-color:var(--dourado-escuro)}
+  .btn-secundario{background:transparent;color:var(--chumbo)}
+  .btn-secundario:hover{background:var(--chumbo);color:#fff}
+  .btn:focus-visible,.moldura:focus-visible,.fechar:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+
+  .moldura{display:block;width:100%;padding:10px;background:var(--chumbo);border:0;border-radius:10px;cursor:zoom-in}
+  .moldura .papel{background:#fff;border:2px solid var(--dourado);border-radius:4px;padding:6px}
+  .moldura img{display:block;width:100%;height:auto}
+  .dica{font-size:13px;color:var(--texto-suave);margin:10px 0 0}
+  .fonte{font-size:12px;color:var(--texto-suave);margin:20px 0 0;max-width:80ch}
+
+  .duvidas{margin-top:36px;border-left:4px solid var(--verde);background:#fff;padding:18px 20px;border-radius:0 8px 8px 0;max-width:62ch}
+  .duvidas p{margin:0;font-size:15px}
+
+  footer{background:var(--chumbo);border-top:3px solid var(--dourado);color:var(--dourado);text-align:center;font-size:13px;padding:24px}
+
+  /* Modal */
+  .modal{position:fixed;inset:0;z-index:50;background:rgba(30,34,39,.94);display:none;flex-direction:column}
+  .modal.aberto{display:flex}
+  .modal-barra{display:flex;justify-content:space-between;align-items:center;gap:12px;
+    padding:calc(12px + env(safe-area-inset-top,0px)) 16px 12px;color:#fff}
+  .modal-barra p{margin:0;font-size:14px;color:var(--dourado);font-weight:700}
+  .fechar{background:var(--dourado);color:var(--chumbo);border:0;border-radius:6px;font:inherit;font-weight:800;
+    font-size:15px;padding:10px 18px;cursor:pointer}
+  .modal-area{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:0 16px calc(16px + env(safe-area-inset-bottom,0px));text-align:center}
+  .modal-area img{width:auto;max-width:none;height:auto;background:#fff;border-radius:4px}
+  @media (max-width:1900px){.modal-area img{width:1869px}}
+  @media (max-width:700px){
+    .topo span.dp{display:none}
+    .modal-area img{width:1400px}
+  }
+  @media (prefers-reduced-motion:no-preference){.modal.aberto{animation:surgir .18s ease-out}}
+  @keyframes surgir{from{opacity:0}to{opacity:1}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topo">
+    <img src="logo-asserth.png" alt="Grupo Asserth" onerror="this.outerHTML='<span class=&quot;marca-texto nobr&quot;>Grupo Asserth</span>'">
+    <span class="dp">Departamento Pessoal</span>
+  </div>
+</header>
+
+<main>
+  <h1>Relatório de Igualdade Salarial: 2º semestre de 2026</h1>
+  <p class="intro">Este é o relatório oficial que compara os salários de mulheres e homens na empresa, com dados do Ministério do Trabalho e Emprego. A divulgação é obrigatória pela Lei nº 14.611/2023.</p>
+
+  <div class="acoes">
+    <button type="button" class="btn btn-principal" id="abrir">Ver em tamanho original</button>
+    <a class="btn btn-secundario" href="relatorio.pdf" download>Baixar PDF</a>
+  </div>
+
+  <button type="button" class="moldura" id="abrirImagem" aria-label="Abrir o relatório em tamanho original">
+    <div class="papel">
+      <img src="relatorio.png" alt="Relatório de Transparência e Igualdade Salarial de Mulheres e Homens – 2º Semestre 2026. Salário contratual mediano das mulheres: 94,7% do recebido pelos homens. Remuneração média mensal das mulheres: 78,0% da recebida pelos homens. Quadro de 109 colaboradores: 50,5% mulheres e 49,5% homens.">
+    </div>
+  </button>
+  <p class="dica">Toque ou clique no relatório para ampliar.</p>
+
+  <p class="fonte">Fonte: MTE – eSocial, RAIS Mensal (junho/2026) e Portal Emprega Brasil (agosto/2026). Os vínculos ativos correspondem a junho de 2026; as remunerações consideram o período de julho de 2025 a junho de 2026.</p>
+
+  <div class="duvidas">
+    <p><strong>Ficou com alguma dúvida?</strong> Fale com o Departamento Pessoal. Estamos aqui para ajudar.</p>
+  </div>
+</main>
+
+<footer><span class="nobr">Grupo Asserth</span> · Departamento Pessoal</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Relatório em tamanho original">
+  <div class="modal-barra">
+    <p>Arraste para navegar pelo relatório</p>
+    <button type="button" class="fechar" id="fechar">Fechar ✕</button>
+  </div>
+  <div class="modal-area">
+    <img src="relatorio.png" alt="Relatório de Igualdade Salarial em tamanho original">
+  </div>
+</div>
+
+<script>
+  (function(){
+    var modal=document.getElementById('modal'), fechar=document.getElementById('fechar'), ultimoFoco=null;
+    function abrir(e){ultimoFoco=e.currentTarget;modal.classList.add('aberto');document.body.style.overflow='hidden';fechar.focus();}
+    function fecharModal(){modal.classList.remove('aberto');document.body.style.overflow='';if(ultimoFoco)ultimoFoco.focus();}
+    document.getElementById('abrir').addEventListener('click',abrir);
+    document.getElementById('abrirImagem').addEventListener('click',abrir);
+    fechar.addEventListener('click',fecharModal);
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('aberto'))fecharModal();});
+  })();
+</script>
+</body>
+</html>
